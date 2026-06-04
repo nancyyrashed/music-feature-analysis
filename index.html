@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Controlled Music Visualizer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/IDMNYU/p5.js-speech@0.0.3/lib/p5.speech.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        canvas {
+            display: block;
+            margin: 20px auto;
+        }
+        .controls {
+            background-color: #2a2a2a;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #00ccff;
+            color: #1a1a1a;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #0099cc;
+        }
+        button.active {
+            background-color: #ff4444;
+        }
+        button:disabled {
+            background-color: #555;
+            cursor: not-allowed;
+        }
+        input[type="file"] {
+            background-color: #333;
+            color: #ffffff;
+            padding: 8px;
+            border: 1px solid #555;
+            border-radius: 4px;
+        }
+        p#status {
+            text-align: center;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <input type="file" id="audio-upload" accept="audio/*">
+        <button id="play-pause">Play</button>
+        <button id="next-sound">Next Sound</button>
+    </div>
+    <p id="status"></p>
+    <script src="2.3.js"></script>
+</body>
+</html>
